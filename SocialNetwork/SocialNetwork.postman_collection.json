@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "7e0c5b28-257c-4d7e-a312-051e7ea8e067",
+		"name": "SocialNetwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"shibdas@avioxtechnologies.com\",\n    \"password\":\"shibdas123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"\",\n    \"email\":\"\",\n    \"password\":\"\",\n    \"first_name\":\"\",\n    \"last_name\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sign-up",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MDM1MTY3LCJpYXQiOjE2NDYwMzQ4NjcsImp0aSI6IjlhNjVmY2EwZmY4NDRmNjRiMzQxMGZhMGRhZTMwMGIyIiwidXNlcl9pZCI6NX0.6sPB0C4wmRjej1kZbYx5vwUASHIaTI2JfxuL18zo0nA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "post1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "popst description",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/aviox/Pictures/Screenshot from 2022-02-28 12-52-00.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MDQwNjY1LCJpYXQiOjE2NDYwNDAzNjUsImp0aSI6ImIxNjg4MmVhM2FjODRiZDU4MGQ1MDIyMTg1ODRjMzVjIiwidXNlcl9pZCI6NX0.c_1FFTbo41pMGhXRcUv-XZeZtVD0avH0JJeiUb2LiCI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MDM1MTY3LCJpYXQiOjE2NDYwMzQ4NjcsImp0aSI6IjlhNjVmY2EwZmY4NDRmNjRiMzQxMGZhMGRhZTMwMGIyIiwidXNlcl9pZCI6NX0.6sPB0C4wmRjej1kZbYx5vwUASHIaTI2JfxuL18zo0nA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MDM1MTY3LCJpYXQiOjE2NDYwMzQ4NjcsImp0aSI6IjlhNjVmY2EwZmY4NDRmNjRiMzQxMGZhMGRhZTMwMGIyIiwidXNlcl9pZCI6NX0.6sPB0C4wmRjej1kZbYx5vwUASHIaTI2JfxuL18zo0nA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "update title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "update desc",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/aviox/Pictures/Screenshot from 2022-02-28 12-59-03.png"
+						},
+						{
+							"key": "user",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like Dislike Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MDQ3ODMxLCJpYXQiOjE2NDYwNDc1MzEsImp0aSI6ImViNjIyNTg2NDA4MDRhMWJhZTgwMzliOTI1OTcwZDIxIiwidXNlcl9pZCI6NX0.KWu8rPUku8xxDM0an5EadrzUGt9wFdgbVf24EcMF6R8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"post\":\"5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/like-dislike",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"like-dislike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All liked post for request user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MDQxMjg4LCJpYXQiOjE2NDYwNDA5ODgsImp0aSI6Ijg3ODc0ZGVlZGRkZDRiNjRhMzhkOTA0NzA4OGRkMDYxIiwidXNlcl9pZCI6NX0.0FqbH-AxuhD6BDLBDhPl9W-XCTCBDn4LBK-Xq8XGW5s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/like-dislike",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"like-dislike"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
